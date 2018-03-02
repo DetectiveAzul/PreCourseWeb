@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Online Dice Roller</title>
+  <meta charset="utf-8"/>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css" href="./main.css">
+  <script src="dice.js"></script>  
+</head>
+<body>
+  <!-- header -->
+  <header class="container">
+  <div class="row">
+    <h1 class="col-sm-9">Online Dice Roller</h1>
+    <nav class="col-sm-3 text-right">
+      <a href="./main.html" class="nostyle"><p>Home</p></a>
+      <a href="./main.html#projects" class="nostyle"><p>Projects</p></a>
+    </nav>
+  </div>
+</header>
+  <!-- end of header -->
+  <!-- script test -->
+  <section class="container support">
+    <form name="form1">
+    <div class="row">
+      <figure class="col-md-8">
+        <p>Input in the text field below the dices you want to roll and any modificator you want to add or substract to the dice roll. <br><strong>Dice Rolls</strong> must be written on dice notation. <br><em>For Example: 2d12+20</em></p>
+        <!--dice rolling-->
+        <input type="text" name="dXn" size="3" maxlength="3" value="1"> <input type="text" name="dXs" size="3" maxlength="3" value="1">
+        <input type="radio" name="dXm" value="P" checked  class="radioStyle"><input type="radio" name="dXm" value="M"  class="radioStyle">
+        <input type="text" name="dXmo" size="3" maxlength="3" value="+0">
+        <a href="javascript:void(null)" onClick="rolldX()" class="nostyle"><input type="button" value="Roll"></a>
+        <input type="text" name="dXr" size="5" maxlength="5">
+        <a href="javascript:void(null)" onClick="docreset()" class="nostyle"><input type="button" value="Reset" class="text-right"></a>
+        <!-- end of dice rolling-->
+      </figure>
+      <figure class="col-md-4">
+      <p><strong>Dice Roll History</strong></p>
+      <textarea id="rollhistory" name="runningtotal" readonly="readonly"></textarea>
+        <SCRIPT LANGUAGE="JavaScript1.2">
+        document.form1.runningtotal.value = "This field records your latest rolls."
+        </script>
+      </figure>
+    </div>
+  </form>
+  </section>
+
+  <!-- footer -->
+    <footer class="container">
+      <div class="row">
+        <p class="col-sm-4">&copy; 2018 Jaime Lopez</p>
+        <ul class="col-sm-8">
+      <li class="col-sm-1">  <img src="./icon/linkedin.png"></li>
+      <a href="http://www.github.com/DetectiveAzul" target="_blank"> <li class="col-sm-1">  <img src="./icon/github.png"></li></a>
+      <a href="http://www.twitter.com/DetectiveAzul" target="_blank"><li class="col-sm-1"> <img src="./icon/twitter.png"></li></a>
+      <a href="http://www.instagram.com/detective_azul" target="_blank"><li class="col-sm-1"> <img src="./icon/instagram.png"></li></a>
+        </ul>
+      </div>
+    </footer>
+  <!-- end of footer -->
+  </body>
+  </html>
+
+  </body>
+  </html>
